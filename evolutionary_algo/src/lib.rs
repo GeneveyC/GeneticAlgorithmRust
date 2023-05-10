@@ -1,5 +1,8 @@
 
+mod random_engine;
 mod individual;
+
+pub use random_engine::RandomEngine;
 pub use individual::Individual;
 
 pub fn create_population(nb_population : u32) -> Vec<Individual> {
@@ -14,4 +17,9 @@ pub fn create_population(nb_population : u32) -> Vec<Individual> {
         individuals.push(ind);
     }
     individuals
+}
+
+pub fn init_random_engine(seed : u64) -> RandomEngine {
+    let rnd_engine = RandomEngine::new(seed);
+    rnd_engine
 }
