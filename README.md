@@ -1,1 +1,1 @@
-# GeneticAlgorithmRust
+# IA_Rust
