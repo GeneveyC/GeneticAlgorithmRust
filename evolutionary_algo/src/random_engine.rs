@@ -12,7 +12,6 @@ impl RandomEngine {
     }
 
     pub fn rand_int(min : u32, max : u32) -> u32 {
-        let value = rand::thread_rng().gen_range(min, max);
-        value
+        rand::thread_rng().gen_range(min, max)
     }
 }
