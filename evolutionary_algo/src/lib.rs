@@ -16,6 +16,7 @@ pub fn create_population(nb_population : u32) -> Vec<Individual> {
     individuals
 }
 
-pub fn init_random_engine(seed : u64) -> RandomEngine {
-    RandomEngine::new(seed)
-}
+
+//pub fn init_random_engine(seed : u64) -> RandomEngine {
+//    RandomEngine::new(seed)
+//}

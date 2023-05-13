@@ -1,17 +1,17 @@
-use rand::{Rng, StdRng, SeedableRng};
+use rand::prelude::*;
 
 pub struct RandomEngine {
     pub seed : u64,
-    pub engine : StdRng,
+    pub engine: StdRng,
 }
 
 impl RandomEngine {
     pub fn new(seed : u64) -> Self {
-        let engine = SeedableRng::seed_from_u64(seed);
+        let engine = StdRng::seed_from_u64( seed );
         RandomEngine { seed, engine }
     }
 
-    pub fn rand_int(min : u32, max : u32) -> u32 {
-        rand::thread_rng().gen_range(min, max)
+    pub fn rand_int(&mut self, min : u32, max : u32) -> u32 {
+        self.engine.gen_range(min..max)
     }
 }

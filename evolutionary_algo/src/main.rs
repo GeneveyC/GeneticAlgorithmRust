@@ -1,7 +1,7 @@
 use evolutionary_algo::Individual;
 use evolutionary_algo::RandomEngine;
 use evolutionary_algo::create_population;
-use evolutionary_algo::init_random_engine;
+//use evolutionary_algo::init_random_engine;
 
 
 fn main() {
@@ -9,7 +9,7 @@ fn main() {
     let population:Vec<Individual> = create_population( 5 );
     println!("Population size: {:?}", population.len());
 
-    init_random_engine( 13 );
-    let value = RandomEngine::rand_int(1, 100);
+    let mut random_engine = RandomEngine::new( 13 );
+    let value  = random_engine.rand_int(0, 100);
     println!("Random value: {:?}", value);
 }
