@@ -1,9 +1,14 @@
 use evolutionary_algo::*;
-//use evolutionary_algo::init_random_engine;
-
 
 fn main() {
     println!("Welcome to the evolutionary algorithm code !");
+    
+    // Define the parameters of our model
+    let mut param = Parameters::default();
+    println!("Parameters (rate mutation): {:?}", param.rate_mutation);
+    let rng_value = param.rng.rand_int(0, 10);
+    println!("Random value: {:?}", rng_value);
+
     let population:Vec<Individual> = create_population( 5 );
     println!("Population size: {:?}", population.len());
 

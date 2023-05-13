@@ -10,7 +10,7 @@ impl Individual {
     }
 
     pub fn mutate(&mut self) {
-
+        
     }
 
     pub fn evaluate(&mut self) {
