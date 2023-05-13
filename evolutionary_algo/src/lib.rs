@@ -1,9 +1,12 @@
 
 mod random_engine;
 mod individual;
+mod parameters;
 
 pub use random_engine::RandomEngine;
 pub use individual::Individual;
+pub use parameters::Parameters;
+
 
 pub fn create_population(nb_population : u32) -> Vec<Individual> {
     let mut individuals:Vec<Individual> = Vec::new();
@@ -15,8 +18,3 @@ pub fn create_population(nb_population : u32) -> Vec<Individual> {
     }
     individuals
 }
-
-
-//pub fn init_random_engine(seed : u64) -> RandomEngine {
-//    RandomEngine::new(seed)
-//}
