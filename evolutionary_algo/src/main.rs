@@ -7,10 +7,6 @@ fn main() {
     let population:Vec<Individual> = create_population( 5 );
     println!("Population size: {:?}", population.len());
 
-    let mut random_engine = RandomEngine::new( 13 );
-    let value  = random_engine.rand_int(0, 100);
-    println!("Random value: {:?}", value);
-
     let mut ind1 = create_individual_from_scratch( 5 );
     let mut ind2 = create_individual_from_scratch( 7 );
 
